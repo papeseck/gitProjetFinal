@@ -1,0 +1,7 @@
+main {
+  min-height: 85vh;
+}
+.product {
+  position: absolute;
+  margin-top: 400px;
+}
