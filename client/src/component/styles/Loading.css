@@ -4,6 +4,9 @@
     display: grid;
     place-items: center;
   }
+  .title :hover{
+    transform: rotate(360deg);
+  }
   .lds-ring {
     display: inline-block;
     position: relative;

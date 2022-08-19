@@ -9,6 +9,7 @@ import Cart from "./component/cart/Cart";
 import Panier from "./page/Panier";
 import ShowProduit from "./component/ShowProduit";
 import AddProduit from "./component/AddProduit";
+import EditProduit from "./component/EditProduit"
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/inscrire" element={<Inscrire/>} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="/addproduit" element={<AddProduit/>} />
+        <Route path="/EditProduit" element={<EditProduit/>} />
       </Routes>
     </>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import axios from "axios";
 import "../component/styles/Loading.css";
 import Loading from "../component/cart/Loading";
@@ -34,7 +34,9 @@ const Home = () => {
       <Header />
       <main className="my-8">
         <Container>
-          <h1>Nos Produits</h1>
+          
+            <h1 className="badge bg-primary text-wrap my-2 title" style={{ color: "red" , fontSize:'30px'}}>NOS PRODUITS</h1>
+          
           <Row>
             {products.map((item, index) => (
               <>

@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { useParams } from "react-router-dom";
 
 const cartSlice = createSlice({
   name: "cart",
@@ -24,7 +25,7 @@ const cartSlice = createSlice({
         });
       }
       state.quantity++;
-      state.totalAmount += payload.price;
+      state.totalAmount += payload.Prix;
     },
 
     removeFromCart: (state, { payload }) => {
@@ -32,7 +33,7 @@ const cartSlice = createSlice({
         (item) => item.id !== payload.id
       );
       state.quantity -= payload.quantity;
-      state.totalAmount -= payload.price * payload.quantity;
+      state.totalAmount -= payload.Prix * payload.quantity;
     },
 
     addItemQuantity: (state, { payload }) => {
@@ -44,7 +45,7 @@ const cartSlice = createSlice({
         }
       });
       state.quantity++;
-      state.totalAmount += payload.price;
+      state.totalAmount += payload.Prix;
     },
 
     subtractItemQuantity: (state, { payload }) => {
@@ -57,7 +58,7 @@ const cartSlice = createSlice({
         subItem.quantity -= 1;
       }
       state.quantity--;
-      state.totalAmount -= subItem.price;
+      state.totalAmount -= subItem.Prix;
     },
   },
 });

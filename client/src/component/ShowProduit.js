@@ -13,15 +13,13 @@ function ShowProduit() {
   const dispatch = useDispatch();
   const [product, setProduct] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  
-
 
   //recuperation d'un produit
   const fetchData = async () => {
     const result = await axios.get(
       `http://localhost:5000/product/show-produit/${id}`
     );
-    console.log(result);
+    //console.log(result);
     setProduct(result.data);
     setIsLoading(false);
   };
@@ -33,14 +31,13 @@ function ShowProduit() {
   if (isLoading) {
     return <Loading />;
   }
-  
+
   return (
     <>
       <Header />
       <main className="my-8 product">
-        
         <Container>
-        <h3> Details Produits</h3>
+          <h3> Details Produits</h3>
           <div className="container flex justify-content-center my-16">
             <Link to="/" btn btn-light my-3>
               {" "}

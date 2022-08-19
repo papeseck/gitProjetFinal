@@ -8,7 +8,7 @@ function HeaderAdmin() {
             <header>
                 <Navbar bg="primary" expand="lg" variant="dark" collapseOnSelect>
                     <Container>
-                        <Navbar.Brand href="#home"> <i className="fa-solid fa-user"></i>Espace Admin</Navbar.Brand>
+                        <Navbar.Brand href="/EditProduit"> <i className="fa-solid fa-user"></i>Espace Admin</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav style={{ marginLeft: "auto" }} >
@@ -16,8 +16,8 @@ function HeaderAdmin() {
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
-                </Navbar>
-                
+                    
+                </Navbar>  
             </header>
         </>
     );

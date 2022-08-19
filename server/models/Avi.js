@@ -1,47 +1,40 @@
-const mongoose = require('mongoose')
-const {isEmail} = require('validator');
+const mongoose = require("mongoose");
+const { isEmail } = require("validator");
 
-const aviSchema = new mongoose.Schema({
+const aviSchema = new mongoose.Schema(
+  {
     pseudo: {
-        type:String,
-        trim: true
+      type: String,
+      trim: true,
     },
     prenom: {
-        type:String,
-        
-        
+      type: String,
     },
     nom: {
-        type:String,
-        
+      type: String,
     },
     email: {
-        type: String,
-        required: true,
-        unique: true,
-        validate: [isEmail], 
-        trim:true
-
+      type: String,
+      required: true,
+      unique: true,
+      validate: [isEmail],
+      trim: true,
     },
     telephone: {
-        type: String,
-        
-       
-
+      type: String,
     },
     password: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     salt: {
-        type: String,
-        required: true
-    }
-},
-{
-    timestamps:true,
-}
-
-)
+      type: String,
+      required: true,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
 
 module.exports = mongoose.model("Avi", aviSchema);
